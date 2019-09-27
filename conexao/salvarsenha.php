@@ -2,8 +2,6 @@
 session_start();
 include('conexao.php');
 
-// $conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Não foi possível conectar');
-
 if(empty($_POST['codigo'])) {
 	header('Location: ../redefinirsenha.php');
 	exit();
@@ -40,7 +38,7 @@ if($row == 1) {
 
 		}
 
-  } else{
+  } else {
 
     $_SESSION['errosenha'] = true;
     header('Location: ../redefinirsenha.php');

@@ -11,7 +11,7 @@ if(empty($_POST['email'])) {
 
 	$random = randomPassword();
 
-	$sql = "update usuario set senha = md5('{$random}') where email = '{$email}'";
+	$sql = "update usuarios set senha = md5('{$random}') where email = '{$email}'";
 
 	if($conexao->query($sql) === TRUE){
 
